@@ -1,39 +1,13 @@
-# create-svelte
+# Monaco-Editor Svelte3 Kit Snowpack3 Example
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+This repository is based on the highly unstable and experimental `@sveltejs/kit@1.0.0-next.31`.
 
-## Creating a project
+The snowpack config had to be replaced completely, as the presets of the svelte config do not allow much customization.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Have a look at the files or at the second commit to understand, which changes are necessary to a codebase.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+Run `npm install` to initialize and `npm run dev` to start the development environment.
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+Kudos to wires and his repository [github.com/wires/debugging-snowpack-svelte-monaco](https://github.com/wires/debugging-snowpack-svelte-monaco), without which I would not have been able to understand the setup of svelte, snowpack and monaco-editor.
 
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Svelte apps are built with _adapters_, which optimise your project for deployment to different environments, like [Begin](https://begin.com), [Netlify](https://www.netlify.com), [Vercel](https://vercel.com) and so on. (You can also create your own adapter — instructions TODO.)
-
-By default, `npm run build` will generate a Node app that you can run with `node build`. To use a different adapter, install it and update your `svelte.config.cjs` accordingly. The following official adapters are available:
-
-- [@sveltejs/adapter-node](https://github.com/sveltejs/kit/tree/master/packages/adapter-node)
-- [@sveltejs/adapter-static](https://github.com/sveltejs/kit/tree/master/packages/adapter-static)
-- [@sveltejs/adapter-netlify](https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify)
-- ...more soon
+Cheers and happy coding!
