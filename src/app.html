@@ -4,6 +4,37 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module">
+			// add this script before svelte.head
+      import * as Monaco from "/_snowpack/pkg/monaco-editor.js";
+      window.Monaco = Monaco;
+      window.MonacoEnvironment = {
+        getWorker(workerId, label) {
+          return new Worker(
+            window.MonacoEnvironment.getWorkerUrl(workerId, label),
+            {
+              name: label,
+              type: "module",
+            }
+          );
+        },
+        getWorkerUrl: function (moduleId, label) {
+          if (label === "json") {
+            return "/_snowpack/pkg/monaco-editor/esm/vs/language/json/json.worker.js";
+          }
+          if (label === "css") {
+            return "/_snowpack/pkg/monaco-editor/esm/vs/language/css/css.worker.js";
+          }
+          if (label === "html") {
+            return "/_snowpack/pkg/monaco-editor/esm/vs/language/html/html.worker.js";
+          }
+          if (label === "typescript" || label === "javascript") {
+            return "/_snowpack/pkg/monaco-editor/esm/vs/language/typescript/ts.worker.js";
+          }
+          return "/_snowpack/pkg/monaco-editor/esm/vs/editor/editor.worker.js";
+        },
+      };
+    </script>
 		%svelte.head%
 	</head>
 	<body>

@@ -2,20 +2,23 @@
 	"name": "svelte-kit-monaco-editor",
 	"version": "0.0.1",
 	"license": "MIT",
+	"type": "module",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"start": "svelte-kit start"
 	},
+	"dependencies": {
+		"monaco-editor": "^0.22.3"
+	},
 	"devDependencies": {
+		"@snowpack/plugin-typescript": "^1.0.0",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/kit": "next",
 		"@sveltejs/snowpack-config": "next",
 		"svelte": "^3.29.0",
-		"typescript": "^4.0.0",
-		"tslib": "^2.0.0",
 		"svelte-preprocess": "^4.0.0",
-		"@snowpack/plugin-typescript": "^1.0.0"
-	},
-	"type": "module"
+		"tslib": "^2.0.0",
+		"typescript": "^4.0.0"
+	}
 }
